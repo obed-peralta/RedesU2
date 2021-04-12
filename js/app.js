@@ -1,7 +1,12 @@
 $(document).ready(function(){
 
-    $('.containerInicio').hide();
-    $('.container21').show();
+    $('.containerInicio').show();
+    $('.container21').hide();
+    $('.container22').hide();
+    $('.container23').hide();
+    $('.container231').hide();
+    $('.container232').hide();
+    $('.container234').hide();
 
     $('[data-toggle="tooltip"]').tooltip();   
     $('[data-toggle="popover"]').popover();
