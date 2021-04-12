@@ -39,10 +39,10 @@
                         <a class="nav-link" role="button" id='autor' data-container="body" data-toggle="popover" data-placement="right" data-content="" data-original-title="TecNM Instituto Tecnológico de Cuautla"><i class="bi bi-info-circle"></i></a>
                     </li>
                 </ul>
-                <div class="custom-control custom-switch">
+                <!--<div class="custom-control custom-switch">
                     <input type="checkbox" class="custom-control-input" id="switchModoOscuro">
                     <label class="custom-control-label" for="switchModoOscuro">Modo Oscuro</label>
-                </div>
+                </div>-->
             </div>    
         </nav>
     </header>
@@ -57,14 +57,72 @@
     <div class="container21">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">Modelo de comunicación OSI</h1>
+                <h1 class="display-1">Modelo de comunicación OSI</h1>
                 <p class="lead">El modelo OSI lo desarrolló allá por 1984 la organización ISO (International Organization for Standarization). Este estándar perseguía el ambicioso objetivo de conseguir interconectar sistema de procedencia distinta para que esto pudieran intercambiar información sin ningún tipo de impedimentos debido a los protocolos con los que estos operaban de forma propia según su fabricante.</p>
                 <hr class="my-4">
                 <div class="row" id="info">
                     <div class="col-6" id="parrafo"><p>El modelo OSI está conformado por 7 capas o niveles de abstracción. Cada uno de estos niveles tendrá sus propias funciones para que en conjunto sean capaces de poder alcanzar su objetivo final. Precisamente esta separación en niveles hace posible la intercomunicación de protocolos distintos al concentrar funciones específicas en cada nivel de operación.</p></div>
                     <div class="col-6" id="imagen"><img src="https://www.profesionalreview.com/wp-content/uploads/2018/11/modelo-OSI-tuto01.png" alt="OSI"></div>
                 </div>
-                <a target="_blank" class="btn btn-primary btn-lg" href="https://www.profesionalreview.com/2018/11/22/modelo-osi/" role="button">Saber más</a>
+                <div class="row" id="info">
+                    <div class="col-12 text-justify" id="parrafo">
+                        <h1 class="display-3">Capas OSI</h1>
+                        <p>Ahora nos toca hablar de los siete niveles que establece el estándar de comunicación OSI. Cada uno de estos niveles tendrá sus propias funciones y protocolos que trabajaran para comunicarse con otros niveles.</p>
+                        <h1 class="display-4">Funcionamiento Básico</h1>
+                        <p>Los protocolos de cada nivel se comunican con sus homólogos o peer, es decir su mismo protocolo situado en el otro extremo de la comunicación. De esta forma no tendrán influencia otros protocolos de otros niveles.</p>
+                        <p>Para establecer el flujo de información, la máquina origen envía la información que partirá desde la capa más superficial hasta la capa física. Luego en la máquina de destino el flujo llegará a esta capa física y subirá hasta la capa más superficial que exista.</p>
+                        <p>Además, cada nivel trabaja de forma independiente de las demás, si necesidad se saber el funcionamiento del resto de niveles. De esta forma <strong>cada uno es modificable sin que exista influencia en los demás</strong>. Por ejemplo, si queremos añadir un equipo físico o una tarjeta de red esto influirá solamente en la capa que controle estos dispositivos.</p>
+                        <p>
+                            <h1 class="display-4">Niveles OSI orientados a red</h1>
+                            <br>Estos niveles se encargan de gestionar el apartado físico de la conexión, como el establecimiento de la comunicación, el enrutamiento de ésta y el envío
+
+                            <br><strong>Capa 1: Física</strong>
+                            <br>Este nivel se encarga directamente de los elementos físicos de la conexión. Gestiona los procedimientos a nivel electrónico para que la cadena de bits de información viaje desde el transmisor al receptor sin alteración alguna. <br>
+
+                            Define el medio físico de transmisión: cables de pares trenzados, cable coaxial, ondas y fibra óptica<br>
+                            Maneja las señales eléctricas y transmite el flujo de bits<br>
+                            Define las características de los materiales, como conectores y niveles de tensión<br>
+                            Algunas normas relativas a este nivel son: ISO 2110, EIA-232, V.35, X.24, V24, V.28<br>
+
+                            <br><strong>Capa 2: Enlace de datos</strong>
+                            <br>Este nivel se encarga de proporcionar los medios funcionales para establecer la comunicación de los elementos físicos. Se ocupa del direccionamiento físico de los datos, el acceso al medio y especialmente de la detección de errores en la transmisión.
+
+                            <br>Esta capa construye las tramas de bits con la información y además otros elementos para controlar que la transmisión se haga de forma correcta. El elemento típico que realiza las funciones de esta capa es el switch o también el router, que se encarga de recibir y enviar datos desde un transmisor a un receptor
+
+                            <br>Los protocolos más conocidos de este enlace son los IEEE 802 para las conexiones LAN y IEEE 802.11 para las conexiones WiFi.
+
+                            <br><strong>Capa 3: Red</strong>
+                            <br>Esta capa se encarga de la identificación del enrutamiento entre dos o más redes conectadas. Este nivel hará que los datos puedan llegar desde el transmisor al receptor siendo capaz de hacer las conmutaciones y encaminamientos necesarios para que el mensaje llegue. Debido a esto es necesario que esta capa conozca la topología de la red en la que opera.
+
+                            <br>El protocolo más conocido que se encarga de esto es el IP. También encontramos otros como IPX, APPLETALK o ISO 9542.
+
+                            <br><strong>Capa 4: Transporte</strong>
+                            <br>Este nivel se encarga de realizar el transporte de los datos que se encuentran dentro del paquete de transmisión desde el origen al destino. Esto se realiza de forma independiente al tipo de red que haya detectado el nivel inferior. La unidad de información o PDU antes vista, también le llamamos Datagrama si trabaja con el protocolo UDP orientado al envío sin conexión, o Segmento, si trabaja con el protocolo TCP orientado a la conexión.
+
+                            <br>Esta capa trabaja con los puertos lógicos como son el 80, 443, etc. Además, es la capa principal en donde se debe proporcionar la calidad suficiente para que la transmisión del mensaje se realice correctamente y con las exigencias del usuario.
+
+                            <br><h1 class="display-4">Niveles OSI orientados a aplicación</h1>
+                            <br>Estos niveles trabajan directamente con las aplicaciones que solicitan los servicios de niveles inferiores. Se encarga de adecuar la información para que sea comprensible desde el punto de vista de un usuario, mediante una interfaz y un formato.
+
+                            <br><strong>Capa 5: Sesión</strong>
+                            <br>Mediante este nivel se podrá controlar y mantener activo el enlace entre las máquinas que están transmitiendo información. De esta forma se asegurará que una vez establecida la conexión, esta e mantengas hasta que finalice la transmisión.
+
+                            <br>Se encargará del mapeo de la dirección de sesión que introduce el usuario para pasarlas a direcciones de transporte con las que trabajan los niveles inferiores.
+
+                            <br><strong>Capa 6: Presentación</strong>
+                            <br>Como su propio nombre intuye, esta capa se encarga de la representación de la información transmitida. Asegurará que los datos que nos llegan a los usuarios sean entendibles a pesar de los distintos protocolos utilizados tanto en un receptor como en un transmisor. Traducen una cadena de caracteres en algo entendible, por así decirlo.
+
+                            <br>En esta capa no se trabaja con direccionamiento de mensajes ni enlaces, sino que es la encargada de trabajar con el contenido útil que nosotros queremos ver.
+
+                            <br><strong>Capa 7: Aplicación</strong>
+                            <br>Este es el último nivel, y en encargado de permitir a los usuarios ejecutar acciones y comandos en sus propias aplicaciones como por ejemplo un botón para enviar un email o un programa para enviar archivos mediante FTP. Permite también la comunicación entre el resto de capas inferiores.    un ejemplo de la capa de aplicación puede ser el protocolo SMTP para el envío de correos electrónicos, programas de transmisión de ficheros por FTP, etc.
+                        </p>
+                    </div>
+                    <div class="col-6 text-center" id="imagen">
+                        <img src="https://entreunosyceros.net/wp-content/uploads/2013/05/ModelOSI-1.gif" alt="">
+                    </div>
+                </div>
+                <a target="_blank" class="btn btn-primary btn-lg" href="https://es.wikipedia.org/wiki/Modelo_OSI" role="button">Saber más</a>
             </div>
         </div>
     </div>
