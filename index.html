@@ -10,6 +10,7 @@
     <title>OSI</title>
 </head>
 <body>
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" role="button" id="u2">Unidad 2</a>
@@ -54,8 +55,9 @@
             </div>
         </div>
     </div>
+
     <div class="container21">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron">
             <div class="container">
                 <h1 class="display-1">Modelo de comunicación OSI</h1>
                 <p class="lead">El modelo OSI lo desarrolló allá por 1984 la organización ISO (International Organization for Standarization). Este estándar perseguía el ambicioso objetivo de conseguir interconectar sistema de procedencia distinta para que esto pudieran intercambiar información sin ningún tipo de impedimentos debido a los protocolos con los que estos operaban de forma propia según su fabricante.</p>
@@ -66,12 +68,14 @@
                 </div>
                 <div class="row" id="info">
                     <div class="col-12 text-justify" id="parrafo">
+                        <hr class="my-4">
                         <h1 class="display-3">Capas OSI</h1>
                         <p>Ahora nos toca hablar de los siete niveles que establece el estándar de comunicación OSI. Cada uno de estos niveles tendrá sus propias funciones y protocolos que trabajaran para comunicarse con otros niveles.</p>
                         <h1 class="display-4">Funcionamiento Básico</h1>
                         <p>Los protocolos de cada nivel se comunican con sus homólogos o peer, es decir su mismo protocolo situado en el otro extremo de la comunicación. De esta forma no tendrán influencia otros protocolos de otros niveles.</p>
                         <p>Para establecer el flujo de información, la máquina origen envía la información que partirá desde la capa más superficial hasta la capa física. Luego en la máquina de destino el flujo llegará a esta capa física y subirá hasta la capa más superficial que exista.</p>
                         <p>Además, cada nivel trabaja de forma independiente de las demás, si necesidad se saber el funcionamiento del resto de niveles. De esta forma <strong>cada uno es modificable sin que exista influencia en los demás</strong>. Por ejemplo, si queremos añadir un equipo físico o una tarjeta de red esto influirá solamente en la capa que controle estos dispositivos.</p>
+                        <hr class="my-4">
                         <p>
                             <h1 class="display-4">Niveles OSI orientados a red</h1>
                             <br>Estos niveles se encargan de gestionar el apartado físico de la conexión, como el establecimiento de la comunicación, el enrutamiento de ésta y el envío
@@ -100,7 +104,7 @@
                             <br>Este nivel se encarga de realizar el transporte de los datos que se encuentran dentro del paquete de transmisión desde el origen al destino. Esto se realiza de forma independiente al tipo de red que haya detectado el nivel inferior. La unidad de información o PDU antes vista, también le llamamos Datagrama si trabaja con el protocolo UDP orientado al envío sin conexión, o Segmento, si trabaja con el protocolo TCP orientado a la conexión.
 
                             <br>Esta capa trabaja con los puertos lógicos como son el 80, 443, etc. Además, es la capa principal en donde se debe proporcionar la calidad suficiente para que la transmisión del mensaje se realice correctamente y con las exigencias del usuario.
-
+                            <hr class="my-4">
                             <br><h1 class="display-4">Niveles OSI orientados a aplicación</h1>
                             <br>Estos niveles trabajan directamente con las aplicaciones que solicitan los servicios de niveles inferiores. Se encarga de adecuar la información para que sea comprensible desde el punto de vista de un usuario, mediante una interfaz y un formato.
 
@@ -126,17 +130,54 @@
             </div>
         </div>
     </div>
+
     <div class="container22">
-
+        <div class="jumbotron">
+            <h1 class="display-1">Modelo de comunicación TCP/IP</h1>
+            <p class="lead text-justify">Actualmente la mayoría de ordenadores están conectados a alguna red (internet, intranet, etc.) y casi todos lo hacen utilizando el modelo TCP/IP. Este modelo es un protocolo para comunicación en redes que permite que un equipo pueda comunicarse dentro de una red. Está basado en el modelo teórico OSI de capas con la que comparte 4 de ellas; sin embargo, ofrece muchas más opciones y es un modelo práctico.</p>
+            <hr class="my-4">
+            <div class="row" id="info">
+                <div class="col-12" id="parrafo">
+                    <h1 class="display-2">¿Qué es TCP/IP?</h1>
+                    <p>La definición de TCP/IP es la identificación del grupo de protocolos de red que hacen posible la transferencia de datos en redes, entre equipos informáticos e internet. Las siglas TCP/IP hacen referencia a este grupo de protocolos:</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">TCP</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">Protocolo de Control de Transmisión</h6>
+                                  <p class="card-text">Permite establecer una conexión y el intercambio de datos entre dos anfitriones. Este protocolo proporciona un transporte fiable de datos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title">IP</h5>
+                                  <h6 class="card-subtitle mb-2 text-muted">Protocolo de Internet</h6>
+                                  <p class="card-text">Utiliza direcciones series de cuatro octetos con formato de punto decimal (como por ejemplo 75.4.160.25). Este protocolo lleva los datos a otras máquinas de la red.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Saber Más</a>
+        </div>
     </div>
-    <div class="container23"></div>
-    <div class="container231"></div>
-    <div class="container232"></div>
-    <div class="container24"></div>
 
+    <div class="container23"></div>
+
+    <div class="container231"></div>
+
+    <div class="container232"></div>
+
+    <div class="container24"></div>
+    
     <script src="js/anime.min.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
